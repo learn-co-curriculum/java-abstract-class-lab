@@ -19,7 +19,7 @@ You will implement the following class hierarchy:
     - The rating for a football player is calculated as (touchdowns * 5).
     - The rating for a hockey player is calculated as (goals * 4 - penalties * 2).
 
-![task1 uml](https://curriculum-content.s3.amazonaws.com/6677/pillars/task1_uml.png)
+![abstract class lab uml](https://curriculum-content.s3.amazonaws.com/6677/pillars/abstract_class_lab_uml.png)
 
 The starter code contains a class named `Athlete` with a field named `jerseyNumber`
 and  concrete methods `setJerseyNumber()` and `getJerseyNumber()`.
@@ -53,13 +53,13 @@ public abstract class Athlete {
 
 Create a subclass of `Athlete` named `FootballPlayer`.
 
-- Add an instance variable `touchdowns` and get/set methods.
+- Add an instance variable named `touchdowns` and get/set methods.
 - Override the `getRating()` method to calculate the football player's
   rating based on the number of touchdowns (touchdowns * 5).
 
 Create a subclass of `Athlete` named `HockeyPlayer`.
 
-- Add instance variables `goals` and `penalties` and get/set methods.
+- Add two instance variables named `goals` and `penalties` and get/set methods.
 - Override the `getRating()` method to calculate the hockey player's rating
   based on the number of goals and penalties (goals * 4 - penalties * 2).
 
