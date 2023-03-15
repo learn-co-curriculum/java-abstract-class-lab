@@ -16,8 +16,8 @@ You will implement the following class hierarchy:
 - Football players are athletes that make touchdowns.
 - Hockey players are athletes that score goals and get penalties.
 - An athlete's performance rating is calculated based on the type of athlete:
-    - The rating for a football player is calculated as (touchdowns * 5).
-    - The rating for a hockey player is calculated as (goals * 4 - penalties * 2).
+  - The rating for a football player is calculated as (touchdowns * 5).
+  - The rating for a hockey player is calculated as (goals * 4 - penalties * 2).
 
 ![abstract class lab uml](https://curriculum-content.s3.amazonaws.com/6677/pillars/abstract_class_lab_uml.png)
 
@@ -109,3 +109,43 @@ Jersey# 57 has rating of 10
 Jersey# 22 has rating of 14
 Jersey# 17 has rating of 4
 ```
+
+
+Edit the Junit class `AthleteTest` to add the two test methods `testFootballPlayer()`
+and `testHockeyPlayer()` as shown:
+
+```java
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class AthleteTest {
+    @Test
+    public void testFootballPlayers() {
+        FootballPlayer athlete1 = new FootballPlayer();
+        athlete1.setJerseyNumber(22);
+        athlete1.setTouchdowns(6);
+        assertEquals(30, athlete1.getRating());
+
+        FootballPlayer athlete2 = new FootballPlayer();
+        athlete2.setJerseyNumber(57);
+        athlete2.setTouchdowns(2);
+        assertEquals(10, athlete2.getRating());
+    }
+
+    @Test
+    public void testHockeyPlayers() {
+        HockeyPlayer athlete1 = new HockeyPlayer();
+        athlete1.setJerseyNumber(22);
+        athlete1.setGoals(5);
+        athlete1.setPenalties(3);
+        assertEquals(14, athlete1.getRating());
+
+        HockeyPlayer athlete2 = new HockeyPlayer();
+        athlete2.setJerseyNumber(17);
+        athlete2.setGoals(1);
+        assertEquals(4, athlete2.getRating());
+    }
+}
+```
+
+Confirm the Junit tests pass.
