@@ -1,10 +1,9 @@
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-class MainTest {
+public class AthleteTest {
 
-    @Test
-    void main() {
-    }
+    // Add tests here
+
 }
+
